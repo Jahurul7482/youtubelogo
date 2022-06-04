@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <!-- style -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+        }
+        .ytlogo{
+            height: 22vh;
+            width: 33vh;
+            background-color: transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        .outside{
+            background-color: red;
+            height: 20vh;
+            width: 30vh;
+            position: absolute;
+            top: 1vh;
+            left: 1.5vh;
+            border-radius: 4vh;
+        }
+        .playbutton{
+            height: 0vh;
+            width: 0vh;
+            border-top: 6vh solid transparent;
+            border-bottom: 6vh solid transparent;
+            /* border-left:12vh solid transparent; */
+            border-left:10vh solid whitesmoke;
+            /* transform: rotate(180deg); */
+            position: absolute;
+            top: 4vh;
+            left: 12vh;
+        }
+        .click{
+            height: 0vh;
+            width: 0vh;
+            border-top: 6vh solid transparent;
+            border-bottom: 6vh solid transparent;
+            border-right: 12vh solid whitesmoke;
+            position: absolute;
+            left: 40vh;
+            top: 30vh;
+            transform: rotate(55deg) scale(.3);
+            animation: animate 4s infinite;
+        }
+        .click::before{
+            content: "";
+            background-color: whitesmoke;
+            height: 2vh;
+            width: 8vh;
+            position: absolute;
+            left: 12vh;
+            top: -1vh;
+        }
+        @keyframes animate {
+            40%{
+                top: 9vh;
+                left: 13vh;
+                transform: rotate(55deg) scale(.3);
+            }
+            50%{
+                top: 9vh;
+                left: 13vh;
+                transform: rotate(55deg) scale(.2);
+            }
+            60%{
+                top: 9vh;
+                left: 13vh;
+                transform: rotate(55deg) scale(.3);
+            }
+        }
+    </style>
+
+    <!-- html -->
+    <div class="ytlogo">
+        <div class="outside">
+            <div class="playbutton"></div>
+        </div>
+        <div class="click"></div>
+    </div>
+</body>
+</html>
